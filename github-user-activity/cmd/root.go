@@ -3,6 +3,7 @@ package cmd
 import (
 	"fmt"
 
+	"github.com/fearfactor3/go-operation-code/github-user-activity/internal/activity"
 	"github.com/spf13/cobra"
 )
 
@@ -30,7 +31,7 @@ func RunDisplayActivityCmd(args []string) error {
 	}
 
 	username := args[0]
-	activities, err := activity.FetchGithubActivity(username)
+	activities, err := activity.FetchGitHubActivity(username)
 	if err != nil {
 		return err
 	}
